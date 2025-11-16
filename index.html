@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -11,7 +12,9 @@
             --primary-color: #2563eb;
             --secondary-color: #1e40af;
             --accent-color: #4f46e5;
-            --background-color: #f8fafc;
+            --green-color: #10b981;
+            --eco-color: #2e7d32;
+            --background-color: #fdf9f3; /* Branco amarelado */
             --card-bg: #ffffff;
             --text-color: #1e293b;
             --light-text: #64748b;
@@ -32,17 +35,13 @@
             color: var(--text-color);
             line-height: 1.6;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
             padding: 20px;
-            background-image: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             width: 100%;
-            flex-grow: 1;
         }
 
         header {
@@ -60,20 +59,24 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 48px;
-            font-weight: bold;
             border: 4px solid white;
             box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            overflow: hidden;
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid white;
         }
 
         h1 {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 8px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--text-color);
         }
 
         .subtitle {
@@ -88,6 +91,33 @@
             margin: 0 auto 20px;
             color: var(--light-text);
             font-size: 1.1rem;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 25px 0;
+        }
+
+        .contact-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--card-bg);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            color: var(--primary-color);
+            font-size: 24px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
         }
 
         .links-container {
@@ -138,7 +168,6 @@
         .link-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -153,20 +182,16 @@
             background: linear-gradient(135deg, #0ea5e9, #0284c7);
         }
 
-        .link-card.gotas .link-icon {
+        .link-card.pesquisa .link-icon {
             background: linear-gradient(135deg, #8b5cf6, #7c3aed);
         }
 
-        .link-card.projetos .link-icon {
-            background: linear-gradient(135deg, #f97316, #ea580c);
+        .link-card.ecoesfera .link-icon {
+            background: linear-gradient(135deg, #2e7d32, #1b5e20);
         }
 
         .link-card.blog .link-icon {
             background: linear-gradient(135deg, #10b981, #059669);
-        }
-
-        .link-card.music .link-icon {
-            background: linear-gradient(135deg, #ec4899, #db2777);
         }
 
         h2 {
@@ -201,25 +226,173 @@
             background-color: #0ea5e9;
         }
 
-        .link-card.gotas .link-button {
+        .link-card.pesquisa .link-button {
             background-color: #8b5cf6;
         }
 
-        .link-card.projetos .link-button {
-            background-color: #f97316;
+        .link-card.ecoesfera .link-button {
+            background-color: #2e7d32;
         }
 
         .link-card.blog .link-button {
             background-color: #10b981;
         }
 
-        .link-card.music .link-button {
-            background-color: #ec4899;
-        }
-
         .link-button:hover {
             opacity: 0.9;
             transform: translateY(-2px);
+        }
+
+        .content-section {
+            padding: 40px 20px;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: var(--text-color);
+        }
+
+        .back-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .eco-section {
+            background-color: #e6f4ea;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .eco-title {
+            font-size: 2.5rem;
+            color: #1b5e20;
+            margin-bottom: 20px;
+        }
+
+        .eco-description {
+            font-size: 1.25rem;
+            color: #2e7d32;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .eco-cta {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 14px 32px;
+            background-color: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(46, 125, 50, 0.3);
+            transition: var(--transition);
+        }
+
+        .eco-cta:hover {
+            background-color: #1b5e20;
+            transform: translateY(-2px);
+        }
+
+        .posts-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-title {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 15px;
+            color: var(--light-text);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .post-excerpt {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .post-link {
+            display: inline-block;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .post-link:hover {
+            text-decoration: underline;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .blog-post {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .blog-title {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 15px;
+            color: var(--light-text);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .blog-content {
+            line-height: 1.8;
+            color: var(--text-color);
         }
 
         .music-section {
@@ -237,7 +410,7 @@
         .music-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 40px;
             flex-wrap: wrap;
         }
 
@@ -248,24 +421,24 @@
             text-decoration: none;
             color: var(--text-color);
             transition: var(--transition);
+            width: 150px;
         }
 
         .music-platform:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px);
         }
 
         .music-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 16px;
-            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: white;
-            font-size: 28px;
-            box-shadow: 0 4px 10px rgba(139, 92, 246, 0.4);
+            font-size: 32px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
 
         .mixcloud .music-icon {
@@ -277,8 +450,8 @@
         }
 
         .music-name {
-            font-weight: 500;
-            font-size: 1.1rem;
+            font-weight: 600;
+            font-size: 1.2rem;
         }
 
         footer {
@@ -302,7 +475,6 @@
             .profile-img {
                 width: 100px;
                 height: 100px;
-                font-size: 36px;
             }
             
             .description {
@@ -312,6 +484,11 @@
             .music-links {
                 flex-direction: column;
                 align-items: center;
+                gap: 25px;
+            }
+            
+            .eco-section {
+                padding: 30px 20px;
             }
         }
 
@@ -333,6 +510,15 @@
             h2 {
                 font-size: 1.3rem;
             }
+            
+            .contact-icons {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -340,16 +526,32 @@
     <div class="container">
         <header>
             <div class="profile-img">
-                LM
+                <!-- Substitua "sua-foto.jpg" pelo caminho da sua foto real -->
+                <img src="sua-foto.jpg" alt="Luiz Medeiros" class="profile-photo">
             </div>
             <h1>Luiz Medeiros</h1>
             <div class="subtitle">Educador • Pesquisador • Consultor</div>
             <p class="description">Conectando educação, filosofia e tecnologia para criar experiências de aprendizado transformadoras e significativas.</p>
+            
+            <div class="contact-icons">
+                <a href="https://x.com/medderao" target="_blank" class="contact-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="http://www.linkedin.com/in/medderao" target="_blank" class="contact-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=5527992628608" target="_blank" class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="mailto:luizsche.medeiros@gmail.com" target="_blank" class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
         </header>
 
         <main>
             <div class="links-container">
-                <a href="https://calendar.app.google/vp3KZjZvbrCnJXTi8" class="link-card agenda" target="_blank">
+                <a href="#agenda" class="link-card agenda">
                     <div class="link-icon">
                         <i class="fas fa-calendar-alt"></i>
                     </div>
@@ -358,34 +560,125 @@
                     <button class="link-button">Agendar Conversa</button>
                 </a>
 
-                <a href="https://gotas.social/gota/1742579386718x104995075633971200" class="link-card gotas" target="_blank">
+                <a href="#pesquisa" class="link-card pesquisa">
                     <div class="link-icon">
                         <i class="fas fa-brain"></i>
                     </div>
                     <h2>Pesquisa</h2>
-                    <p class="link-description">Acesse minhas reflexões sobre filosofia, ética, educação e subjetividade em formato de gotas de conhecimento.</p>
+                    <p class="link-description">Acesse minhas reflexões sobre filosofia, ética, educação e subjetividade em formato de postagens curtas.</p>
                     <button class="link-button">Explorar Pesquisas</button>
                 </a>
 
-                <a href="http://www.linkedin.com/in/medderao" class="link-card projetos" target="_blank">
+                <a href="#ecoesfera" class="link-card ecoesfera">
                     <div class="link-icon">
-                        <i class="fas fa-project-diagram"></i>
+                        <i class="fas fa-seedling"></i>
                     </div>
-                    <h2>Projetos</h2>
-                    <p class="link-description">Conheça meus projetos profissionais, iniciativas educacionais e trabalhos de consultoria ambiental.</p>
-                    <button class="link-button">Ver Projetos</button>
+                    <h2>EcoEsfera</h2>
+                    <p class="link-description">Projeto de regeneração ambiental que transforma vontade de ajudar em florestas reais e comprovadas.</p>
+                    <button class="link-button">Conhecer Projeto</button>
                 </a>
 
-                <a href="https://x.com/medderao" class="link-card blog" target="_blank">
+                <a href="#blog" class="link-card blog">
                     <div class="link-icon">
                         <i class="fas fa-blog"></i>
                     </div>
                     <h2>Blog</h2>
                     <p class="link-description">Reflexões diárias sobre educação, tecnologia, sustentabilidade e desenvolvimento humano.</p>
-                    <button class="link-button">Acessar Blog</button>
+                    <button class="link-button">Ler Blog</button>
                 </a>
             </div>
 
+            <!-- Seção EcoEsfera -->
+            <section id="ecoesfera" class="content-section eco-section">
+                <h2 class="eco-title">🌿 EcoEsfera</h2>
+                <p class="eco-description">Na EcoEsfera, sua vontade de ajudar vira floresta, sua compra vira renda local, e sua esperança vira prova concreta.</p>
+                <a href="https://forms.gle/SEU-LINK-AQUI" class="eco-cta">Adote 1 m² de manguezal no ES</a>
+                <div class="back-section">
+                    <a href="#" class="back-link">
+                        <i class="fas fa-arrow-left"></i> Voltar ao cartão de visitas
+                    </a>
+                </div>
+            </section>
+
+            <!-- Seção Pesquisa -->
+            <section id="pesquisa" class="content-section">
+                <h2 class="section-title">Pesquisa</h2>
+                <div class="posts-container">
+                    <!-- Postagem 1 -->
+                    <div class="post-card">
+                        <h3 class="post-title">A Ética no Mundo Digital</h3>
+                        <div class="post-meta">
+                            <span class="post-date">15 de outubro de 2024</span>
+                            <span class="post-category">Filosofia Digital</span>
+                        </div>
+                        <p class="post-excerpt">
+                            Refletindo sobre como os princípios éticos tradicionais se aplicam no mundo digital e como podemos desenvolver frameworks para decisões morais em ambientes tecnológicos complexos.
+                        </p>
+                        <a href="https://gotas.social/gota/1742579386718x104995075633971200" target="_blank" class="post-link">
+                            Ler mais →
+                        </a>
+                    </div>
+                    
+                    <!-- Postagem 2 -->
+                    <div class="post-card">
+                        <h3 class="post-title">Subjetividade e Tecnologia</h3>
+                        <div class="post-meta">
+                            <span class="post-date">10 de outubro de 2024</span>
+                            <span class="post-category">Filosofia da Subjetividade</span>
+                        </div>
+                        <p class="post-excerpt">
+                            Explorando como a tecnologia afeta nossa experiência subjetiva do mundo e como podemos manter nossa humanidade em meio à digitalização acelerada da sociedade contemporânea.
+                        </p>
+                        <a href="https://gotas.social/gota/1742579386718x104995075633971201" target="_blank" class="post-link">
+                            Ler mais →
+                        </a>
+                    </div>
+                </div>
+                <div class="back-section">
+                    <a href="#" class="back-link">
+                        <i class="fas fa-arrow-left"></i> Voltar ao cartão de visitas
+                    </a>
+                </div>
+            </section>
+
+            <!-- Seção Blog -->
+            <section id="blog" class="content-section">
+                <h2 class="section-title">Blog Pessoal</h2>
+                <div class="blog-container">
+                    <!-- Postagem 1 -->
+                    <article class="blog-post">
+                        <h3 class="blog-title">A Filosofia na Educação Contemporânea</h3>
+                        <div class="blog-meta">
+                            <span class="blog-date">20 de outubro de 2024</span>
+                            <span class="blog-category">Educação</span>
+                        </div>
+                        <div class="blog-content">
+                            <p>Em um mundo cada vez mais tecnológico, a filosofia tem um papel fundamental na formação crítica dos estudantes. Ao invés de ser vista como disciplina ultrapassada, ela deve ser integrada de forma prática ao cotidiano escolar, ajudando os jovens a desenvolverem seu pensamento autônomo e crítico diante das complexidades do mundo atual.</p>
+                            <p>Ao trabalhar com adolescentes na SEDU, percebi como a filosofia pode ajudar na formação de cidadãos mais reflexivos e engajados. Quando questionamos o mundo ao nosso redor, desenvolvemos uma relação mais profunda com o conhecimento e com os outros. A educação filosófica não é apenas sobre aprender conceitos, mas sobre desenvolver uma postura diante da vida.</p>
+                        </div>
+                    </article>
+                    
+                    <!-- Postagem 2 -->
+                    <article class="blog-post">
+                        <h3 class="blog-title">Como Ensinar Filosofia para Adolescentes</h3>
+                        <div class="blog-meta">
+                            <span class="blog-date">18 de outubro de 2024</span>
+                            <span class="blog-category">Pedagogia</span>
+                        </div>
+                        <div class="blog-content">
+                            <p>Minha experiência como estagiário na SEDU me ensinou que o segredo para ensinar filosofia para adolescentes está na relevância do conteúdo para suas vidas. Quando relacionamos conceitos filosóficos a situações do cotidiano dos alunos, notamos maior engajamento e participação. A filosofia não é apenas sobre teoria, mas sobre como vivemos e nos relacionamos com o mundo.</p>
+                            <p>Uma estratégia que funcionou bem foi criar dinâmicas onde os alunos podiam expressar suas opiniões sobre temas atuais e, depois, apresentar como filósofos clássicos e contemporâneos abordaram questões similares. Isso criou uma ponte entre o pensamento crítico histórico e suas experiências pessoais, tornando a filosofia viva e significativa para eles.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="back-section">
+                    <a href="#" class="back-link">
+                        <i class="fas fa-arrow-left"></i> Voltar ao cartão de visitas
+                    </a>
+                </div>
+            </section>
+
+            <!-- Seção Música -->
             <div class="music-section">
                 <h2 class="music-title">Minha Expressão Artística</h2>
                 <div class="music-links">
@@ -412,27 +705,40 @@
     </div>
 
     <script>
-        // Add animation effects when scrolling into view
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.link-card, .music-platform');
-            
-            // Add hover effect enhancement
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px)';
-                });
+        // Adicionar evento de clique para links de ancora suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
                 
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                });
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
             });
-            
-            // Simple animation on page load
-            setTimeout(() => {
-                document.querySelector('.profile-img').style.opacity = '1';
-                document.querySelector('.profile-img').style.transform = 'scale(1)';
-            }, 300);
+        });
+
+        // Adicionar animações suaves ao scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verificar se há âncora na URL e rolar para ela
+            const urlHash = window.location.hash;
+            if (urlHash) {
+                const targetElement = document.querySelector(urlHash);
+                if (targetElement) {
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }, 500);
+                }
+            }
         });
     </script>
 </body>
 </html>
+```
