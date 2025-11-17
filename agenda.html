@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agenda – Luiz Medeiros</title>
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --text: #1e293b;
+      --light-text: #64748b;
+      --bg: #ffffff;
+      --card-bg: #f0f9ff;
+      --agenda: #0ea5e9;
+      --agenda-light: #f0f9ff;
+      --border-radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .agenda-icon {
+      font-size: 2.5rem;
+      color: var(--agenda);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .description {
+      color: var(--light-text);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .agenda-card {
+      background: var(--agenda-light);
+      border-radius: var(--border-radius);
+      padding: 28px;
+      margin-bottom: 30px;
+      border-left: 4px solid var(--agenda);
+      text-align: center;
+    }
+
+    .agenda-card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      margin-bottom: 16px;
+      color: var(--agenda);
+    }
+
+    .agenda-card p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin: 15px 0;
+      padding: 12px 36px;
+      background-color: var(--agenda);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: all 0.25s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #0284c7;
+      transform: translateY(-2px);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--agenda);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .back-link i {
+      margin-right: 6px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--light-text);
+      font-size: 0.9rem;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.0rem; }
+      .agenda-card { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="agenda-icon">
+        <i class="fas fa-calendar-alt"></i>
+      </div>
+      <h1>Agenda</h1>
+      <p class="description">
+        Converse comigo sobre educação regenerativa, consultoria ambiental, Web3 para o bem ou parcerias com a EcoEsfera.
+      </p>
+    </header>
+
+    <main>
+      <div class="agenda-card">
+        <h2>📅 Marque uma conversa</h2>
+        <p>
+          Disponho de horários para sessões de 30 minutos, seja para orientação, troca de ideias ou alinhamento de projetos.
+        </p>
+        <a href="https://calendar.app.google/vp3KZjZvbrCnJXTi8" target="_blank" class="cta-button">
+          Ver disponibilidade
+        </a>
+      </div>
+
+      <a href="/" class="back-link">
+        <i class="fas fa-arrow-left"></i> Voltar ao cartão de visitas
+      </a>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Luiz Medeiros. Todos os direitos reservados.</p>
+    </footer>
+  </div>
+</body>
+</html>
