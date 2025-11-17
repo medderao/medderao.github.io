@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minhas Mixtapes – Luiz Medeiros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      padding: 30px 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: #b3b3b3;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .playlist-card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      transition: background 0.25s ease;
+    }
+
+    .playlist-card:hover {
+      background: #282828;
+    }
+
+    .playlist-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #1db954;
+    }
+
+    .playlist-genres {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .genre-tag {
+      background: rgba(29, 185, 84, 0.1);
+      color: #1db954;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .playlist-description {
+      color: #d0d0d0;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .playlist-link {
+      display: inline-block;
+      color: #1db954;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .playlist-link:hover {
+      text-decoration: underline;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      color: #1db954;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .back-link i {
+      margin-right: 6px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #777;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 20px 16px; }
+      h1 { font-size: 1.9rem; }
+      .playlist-card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Minhas Mixtapes</h1>
+      <p class="subtitle">
+        Playlists cuidadosamente curadas para diferentes momentos: escrever, caminhar, refletir, amar.
+      </p>
+    </header>
+
+    <main>
+      <div class="playlist-card">
+        <div class="playlist-title">Raízes e Antenas</div>
+        <div class="playlist-genres">
+          <span class="genre-tag">Afrobeats</span>
+          <span class="genre-tag">MPB</span>
+          <span class="genre-tag">Lusofonia</span>
+        </div>
+        <p class="playlist-description">
+          Para escrever ao amanhecer. Batidas que conectam o Atlântico sul ao pensamento crítico.
+        </p>
+        <a href="https://open.spotify.com/playlist/SEU-LINK-AQUI" target="_blank" class="playlist-link">
+          Ouvir no Spotify →
+        </a>
+      </div>
+
+      <div class="playlist-card">
+        <div class="playlist-title">Floresta Interna</div>
+        <div class="playlist-genres">
+          <span class="genre-tag">Ambient</span>
+          <span class="genre-tag">Neo-classical</span>
+          <span class="genre-tag">Field Recordings</span>
+        </div>
+        <p class="playlist-description">
+          Trilhas sonoras para caminhadas em manguezais imaginários — ou reais.
+        </p>
+        <a href="https://open.spotify.com/playlist/SEU-LINK-AQUI" target="_blank" class="playlist-link">
+          Ouvir no Spotify →
+        </a>
+      </div>
+
+      <div class="playlist-card">
+        <div class="playlist-title">Cartas a Milena</div>
+        <div class="playlist-genres">
+          <span class="genre-tag">Jazz</span>
+          <span class="genre-tag">Chanson</span>
+          <span class="genre-tag">Literatura Sonora</span>
+        </div>
+        <p class="playlist-description">
+          Para escrever cartas que nunca serão enviadas — mas que curam o coração.
+        </p>
+        <a href="https://open.spotify.com/playlist/SEU-LINK-AQUI" target="_blank" class="playlist-link">
+          Ouvir no Spotify →
+        </a>
+      </div>
+
+      <div class="playlist-card">
+        <div class="playlist-title">Regeneração Diária</div>
+        <div class="playlist-genres">
+          <span class="genre-tag">Brazilian Funk</span>
+          <span class="genre-tag">Reggae Capixaba</span>
+          <span class="genre-tag">Batekoo</span>
+        </div>
+        <p class="playlist-description">
+          Para dançar a sustentabilidade — com os pés no chão e o corpo em movimento.
+        </p>
+        <a href="https://open.spotify.com/playlist/SEU-LINK-AQUI" target="_blank" class="playlist-link">
+          Ouvir no Spotify →
+        </a>
+      </div>
+
+      <a href="/" class="back-link">
+        <i class="fas fa-arrow-left"></i> Voltar ao cartão de visitas
+      </a>
+    </main>
+
+    <footer>
+      <p>© 2025 Luiz Medeiros. Minha expressão artística, fora das palavras.</p>
+    </footer>
+  </div>
+</body>
+</html>
