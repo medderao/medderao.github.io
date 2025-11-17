@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog – Luiz Medeiros</title>
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --text: #1e293b;
+      --light-text: #64748b;
+      --bg: #ffffff;
+      --card-bg: #f0fdf4;
+      --blog: #10b981;
+      --blog-light: #f0fdf4;
+      --border-radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .blog-icon {
+      font-size: 2.5rem;
+      color: var(--blog);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .description {
+      color: var(--light-text);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .blog-post {
+      background: var(--blog-light);
+      border-radius: var(--border-radius);
+      padding: 28px;
+      margin-bottom: 30px;
+      border-left: 4px solid var(--blog);
+    }
+
+    .blog-post h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: var(--blog);
+    }
+
+    .post-meta {
+      font-size: 0.95rem;
+      color: var(--light-text);
+      margin-bottom: 16px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .blog-post p {
+      margin-bottom: 16px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--blog);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .back-link i {
+      margin-right: 6px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--light-text);
+      font-size: 0.9rem;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.0rem; }
+      .blog-post { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="blog-icon">
+        <i class="fas fa-book"></i>
+      </div>
+      <h1>Blog</h1>
+      <p class="description">
+        Reflexões sobre educação crítica, filosofia da subjetividade, sustentabilidade e o encontro entre tradição e inovação tecnológica.
+      </p>
+    </header>
+
+    <main>
+      <article class="blog-post">
+        <h2>A Filosofia na Educação Contemporânea</h2>
+        <div class="post-meta">
+          <span>20 de outubro de 2024</span>
+          <span>Educação</span>
+        </div>
+        <p>
+          Em um mundo cada vez mais tecnológico, a filosofia tem um papel fundamental na formação crítica dos estudantes. Ao invés de ser vista como disciplina ultrapassada, ela deve ser integrada de forma prática ao cotidiano escolar, ajudando os jovens a desenvolverem seu pensamento autônomo e crítico diante das complexidades do mundo atual.
+        </p>
+        <p>
+          Ao trabalhar com adolescentes na SEDU, percebi como a filosofia pode ajudar na formação de cidadãos mais reflexivos e engajados. Quando questionamos o mundo ao nosso redor, desenvolvemos uma relação mais profunda com o conhecimento e com os outros.
+        </p>
+      </article>
+
+      <article class="blog-post">
+        <h2>Como Ensinar Filosofia para Adolescentes</h2>
+        <div class="post-meta">
+          <span>18 de outubro de 2024</span>
+          <span>Pedagogia</span>
+        </div>
+        <p>
+          Minha experiência como estagiário na SEDU me ensinou que o segredo para ensinar filosofia para adolescentes está na relevância do conteúdo para suas vidas. Quando relacionamos conceitos filosóficos a situações do cotidiano dos alunos, notamos maior engajamento e participação.
+        </p>
+        <p>
+          Uma estratégia que funcionou bem foi criar dinâmicas onde os alunos podiam expressar suas opiniões sobre temas atuais e, depois, apresentar como filósofos clássicos e contemporâneos abordaram questões similares. Isso criou uma ponte entre o pensamento crítico histórico e suas experiências pessoais.
+        </p>
+      </article>
+
+      <article class="blog-post">
+        <h2>Educação Regenerativa e Web3</h2>
+        <div class="post-meta">
+          <span>10 de novembro de 2025</span>
+          <span>Tecnologia para o Bem</span>
+        </div>
+        <p>
+          A Web3 não precisa ser apenas especulativa. Quando aliada à educação regenerativa, pode se tornar uma ferramenta de transparência radical — permitindo que comunidades rurais registrem suas ações de plantio ou coleta e recebam reconhecimento visível e renda justa.
+        </p>
+        <p>
+          Na EcoEsfera, não vendemos tokens. Vendemos credibilidade. E credibilidade é o bem mais escasso — e necessário — na luta ambiental do século XXI.
+        </p>
+      </article>
+
+      <a href="/" class="back-link">
+        <i class="fas fa-arrow-left"></i> Voltar ao cartão de visitas
+      </a>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Luiz Medeiros. Todos os direitos reservados.</p>
+    </footer>
+  </div>
+</body>
+</html>
