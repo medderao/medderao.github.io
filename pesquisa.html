@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pesquisa – Luiz Medeiros</title>
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --text: #1e293b;
+      --light-text: #64748b;
+      --bg: #ffffff;
+      --card-bg: #f5f3ff;
+      --pesquisa: #8b5cf6;
+      --pesquisa-light: #f5f3ff;
+      --border-radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .pesquisa-icon {
+      font-size: 2.5rem;
+      color: var(--pesquisa);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .description {
+      color: var(--light-text);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .pesquisa-card {
+      background: var(--pesquisa-light);
+      border-radius: var(--border-radius);
+      padding: 28px;
+      margin-bottom: 30px;
+      border-left: 4px solid var(--pesquisa);
+    }
+
+    .pesquisa-card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      margin-bottom: 16px;
+      color: var(--pesquisa);
+    }
+
+    .pesquisa-card p {
+      margin-bottom: 14px;
+    }
+
+    .gotas-list {
+      margin-top: 20px;
+    }
+
+    .gota-item {
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px dashed rgba(139, 92, 246, 0.2);
+    }
+
+    .gota-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .gota-title {
+      font-weight: 600;
+      color: var(--pesquisa);
+      margin-bottom: 6px;
+      font-size: 1.15rem;
+    }
+
+    .gota-link {
+      color: var(--pesquisa);
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .gota-link:hover {
+      text-decoration: underline;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--pesquisa);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .back-link i {
+      margin-right: 6px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--light-text);
+      font-size: 0.9rem;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.0rem; }
+      .pesquisa-card { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="pesquisa-icon">
+        <i class="fas fa-brain"></i>
+      </div>
+      <h1>Pesquisa</h1>
+      <p class="description">
+        Reflexões sobre ética, subjetividade, educação crítica e a intersecção entre filosofia, tecnologia e regeneração ambiental.
+      </p>
+    </header>
+
+    <main>
+      <div class="pesquisa-card">
+        <h2>🧠 Gotas de Conhecimento</h2>
+        <p>
+          Compartilho pensamentos curtos e densos sobre temas que me atravessam — muitas vezes inspirados em autores como Damásio, Nietzsche, Aristóteles e experiências com adolescentes na SEDU.
+        </p>
+        <p>
+          Veja algumas das minhas reflexões publicadas:
+        </p>
+
+        <div class="gotas-list">
+          <div class="gota-item">
+            <div class="gota-title">A Ética no Mundo Digital</div>
+            <a href="https://gotas.social/gota/1742579386718x104995075633971200" target="_blank" class="gota-link">
+              Ler no Gotas.Social <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+          <div class="gota-item">
+            <div class="gota-title">Subjetividade e Tecnologia</div>
+            <a href="https://gotas.social/gota/1742579386718x104995075633971201" target="_blank" class="gota-link">
+              Ler no Gotas.Social <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+          <div class="gota-item">
+            <div class="gota-title">Filosofia e Educação Regenerativa</div>
+            <a href="https://gotas.social/gota/SEU-LINK-AQUI" target="_blank" class="gota-link">
+              Ler no Gotas.Social <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="/" class="back-link">
+        <i class="fas fa-arrow-left"></i> Voltar ao cartão de visitas
+      </a>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Luiz Medeiros. Todos os direitos reservados.</p>
+    </footer>
+  </div>
+</body>
+</html>
