@@ -82,7 +82,16 @@
       margin-bottom: 30px;
       border-left: 4px solid var(--eco);
     }
-
+    .logo-container {
+  margin-bottom: 20px;
+}
+.eco-logo {
+  height: 80px; /* Tamanho ajustável - comece com 80px e ajuste conforme necessário */
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  /* Nenhum border-radius para manter a forma original da logo */
+}
     .eco-card h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.6rem;
@@ -144,9 +153,9 @@
 <body>
   <div class="container">
     <header>
-      <div class="eco-icon">
-        <i class="fas fa-seedling"></i>
-      </div>
+      <div class="logo-container">
+  <img src="/logo.png" alt="Logo da EcoEsfera" class="eco-logo">
+</div>
       <h1>EcoEsfera</h1>
       <p class="frase-impacto">
         Na EcoEsfera, sua vontade de ajudar vira floresta, sua compra vira renda local, e sua esperança vira prova concreta.
