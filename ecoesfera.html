@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EcoEsfera</title>
-  <link href="https://fonts.googleapis.com/..." rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/...">
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.png" type="image/png">
-  <style>...</style>
-</head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>EcoEsfera – Regeneração com Prova</title>
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;500&display=swap" rel="stylesheet">
   <!-- Ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.png" type="image/png">
   <style>
     :root {
       --text: #1e293b;
@@ -27,13 +20,11 @@
       --eco-light: #e6f4ea;
       --border-radius: 12px;
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Inter', sans-serif;
       background-color: var(--bg);
@@ -42,30 +33,29 @@
       padding: 20px;
       min-height: 100vh;
     }
-
     .container {
       max-width: 800px;
       margin: 0 auto;
     }
-
     header {
       text-align: center;
       margin-bottom: 30px;
     }
-
-    .eco-icon {
-      font-size: 2.5rem;
-      color: var(--eco);
-      margin-bottom: 16px;
+    .logo-container {
+      margin-bottom: 20px;
     }
-
+    .eco-logo {
+      height: 80px;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+    }
     h1 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.4rem;
       font-weight: 600;
       margin-bottom: 16px;
     }
-
     .frase-impacto {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.4rem;
@@ -74,7 +64,6 @@
       margin-bottom: 24px;
       font-style: italic;
     }
-
     .eco-card {
       background: var(--eco-light);
       border-radius: var(--border-radius);
@@ -82,45 +71,85 @@
       margin-bottom: 30px;
       border-left: 4px solid var(--eco);
     }
-    .logo-container {
-  margin-bottom: 20px;
-}
-.eco-logo {
-  height: 80px; /* Tamanho ajustável - comece com 80px e ajuste conforme necessário */
-  width: auto;
-  display: block;
-  margin: 0 auto;
-  /* Nenhum border-radius para manter a forma original da logo */
-}
     .eco-card h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.6rem;
       margin-bottom: 16px;
       color: var(--eco);
     }
-
     .eco-card p {
       margin-bottom: 12px;
     }
-
+    
+    /* Seção de apoio */
+    .support-section {
+      margin: 30px 0;
+    }
+    .support-levels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .level-card {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 20px;
+      text-align: center;
+      border: 2px solid var(--eco);
+      transition: all 0.25s ease;
+    }
+    .level-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
+    }
+    .level-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: var(--eco);
+    }
+    .level-price {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--eco);
+    }
+    .level-description {
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
     .cta-button {
       display: inline-block;
       margin: 15px 0;
-      padding: 12px 32px;
+      padding: 10px 20px;
       background-color: var(--eco);
       color: white;
       text-decoration: none;
       border-radius: 30px;
       font-weight: 500;
-      font-size: 1.1rem;
+      font-size: 1rem;
       transition: all 0.25s ease;
+      text-align: center;
     }
-
     .cta-button:hover {
       background-color: #1b5e20;
       transform: translateY(-2px);
     }
-
+    
+    /* Prova de impacto */
+    .proof-section {
+      margin: 30px 0;
+    }
+    .proof-list {
+      margin-left: 20px;
+      margin-top: 15px;
+    }
+    .proof-list li {
+      margin-bottom: 10px;
+    }
+    
+    /* Link de volta */
     .back-link {
       display: inline-block;
       margin-top: 20px;
@@ -129,11 +158,11 @@
       font-weight: 500;
       font-size: 1rem;
     }
-
     .back-link i {
       margin-right: 6px;
     }
-
+    
+    /* Rodapé */
     footer {
       text-align: center;
       margin-top: 40px;
@@ -142,11 +171,18 @@
       padding-top: 20px;
       border-top: 1px solid rgba(0,0,0,0.05);
     }
-
+    
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .support-levels {
+        grid-template-columns: 1fr;
+      }
+    }
     @media (max-width: 600px) {
       h1 { font-size: 2.0rem; }
       .frase-impacto { font-size: 1.2rem; }
       .eco-card { padding: 20px; }
+      .eco-logo { height: 70px; }
     }
   </style>
 </head>
@@ -154,54 +190,83 @@
   <div class="container">
     <header>
       <div class="logo-container">
-  <img src="/logo.png" alt="Logo da EcoEsfera" class="eco-logo">
-</div>
+        <img src="/logo.png" alt="Logo da EcoEsfera" class="eco-logo">
+      </div>
       <h1>EcoEsfera</h1>
       <p class="frase-impacto">
-        Na EcoEsfera, sua vontade de ajudar vira floresta, sua compra vira renda local, e sua esperança vira prova concreta.
+        Na EcoEsfera, o conhecimento ancestral encontra a tecnologia para criar regeneração com prova.
       </p>
     </header>
-
+    
     <main>
+      <!-- Morgana -->
       <div class="eco-card">
-        <h2>🌱 Um manguezal na Grande Vitória, com seu nome</h2>
+        <h2>🌟 Morgana: Guardiã do Conhecimento Ancestral</h2>
         <p>
-          Você ajuda a recuperar <strong>1 m² de manguezal no Espírito Santo</strong> por apenas <strong>R$ 20 por mês!</strong>.
+          Morgana caminha entre o conhecimento ancestral e a prática cotidiana da regeneração desde pequena, criada através de práticas ancestrais. Morgana trabalha com a mão na terra há 22 anos e, como terapeuta integrativa, ela entende que cuidar da terra é também cuidar das pessoas.
         </p>
         <p>
-          Cada cota inclui:
+          Sua relação com as plantas não é técnica — é familiar. <strong>"Meu avô plantava uma árvore para cada neto. Eu sou uma graviola"</strong>, conta ela, trazendo para o presente uma sabedoria que vê na natureza não um recurso, mas uma extensão de nós mesmos.
         </p>
-        <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 15px;">
-          <li>Uma <strong>foto geolocalizada</strong> do local recuperado</li>
-          <li>O <strong>nome e história</strong> do pescador ou agricultor que realizou o plantio</li>
-          <li>Um <strong>link exclusivo</strong> para acompanhar a evolução do seu m² ao longo do tempo</li>
-          <li>A opção de <strong>presentear</strong> uma cota para um ente querido</li>
+        <p>
+          Quando Morgana planta uma árvore, não está apenas restaurando ecossistemas. Ela está tecendo memórias, criando pontos de encontro entre passado e futuro, e mostrando que a verdadeira regeneração começa quando reconectamos nossas raízes com o cuidado.
+        </p>
+        <!-- Espaço reservado para foto de Morgana (futuro) -->
+        <!-- <img src="morgana-plantando.jpg" alt="Morgana trabalhando com as mudas" style="width:100%; border-radius:8px; margin-top:20px;"> -->
+      </div>
+      
+      <!-- Projeto -->
+      <div class="eco-card">
+        <h2>🌱 Raízes do Santa Maria — Regeneração com Prova</h2>
+        <p>
+          Em parceria com Morgana, a EcoEsfera inicia o <strong>Projeto "Raízes do Santa Maria"</strong>: a regeneração de áreas degradadas nas margens do Rio Santa Maria, em Espírito Santo, com o plantio de <strong>100 mudas nativas da Mata Atlântica</strong> — incluindo pau-brasil, jequitibá-rosa, cedro e araçá.
+        </p>
+        <p>
+          Cada árvore será acompanhada ao longo do tempo. Você não apenas apoiará o plantio — <strong>verá sua árvore crescer</strong>. Com um link exclusivo, você recebe:
+        </p>
+        <ul class="proof-list">
+          <li><strong>Fotos geolocalizadas</strong> do local de plantio</li>
+          <li><strong>Acesso contínuo</strong> para acompanhar sua evolução</li>
+          <li><strong>Um vídeo pessoal</strong> de Morgana agradecendo seu apoio</li>
         </ul>
-        <!-- ⚠️ Substitua pelo link do seu formulário de validação quando pronto -->
-        <a href="https://forms.gle/SEU-LINK-AQUI" class="cta-button">
-          Adotar 1 m² de manguezal
-        </a>
+        <!-- Espaço reservado para foto do local degradado / plantio (futuro) -->
+        <!-- <img src="rio-santa-maria.jpg" alt="Área degradada às margens do Rio Santa Maria" style="width:100%; border-radius:8px; margin-top:20px;"> -->
       </div>
-
-      <div class="eco-card">
-        <h2>🔍 Por que isso é diferente?</h2>
-        <p>
-          Muitos projetos ambientais não mostram onde ou como seu apoio faz diferença.
-        </p>
-        <p>
-          Aqui, <strong>você vê, nomeia e acompanha</strong> sua regeneração — como quem “compra uma estrela”, mas para a Terra.
-        </p>
-        <p>
-          Seu apoio gera <strong>renda justa para comunidades tradicionais</strong> e <strong>prova irrefutável de impacto</strong>.
-        </p>
+      
+      <!-- Apoie com os 3 níveis -->
+      <div class="eco-card support-section">
+        <h2>🌿 Apoie com Propósito</h2>
+        <p>Escolha como você quer se conectar com esta regeneração:</p>
+        
+        <div class="support-levels">
+          <div class="level-card">
+            <div class="level-title">Adote 1 muda</div>
+            <div class="level-price">R$ 30/mês</div>
+            <p class="level-description">Apoie o plantio de uma árvore nativa e receba seu link de acompanhamento vitalício.</p>
+            <a href="#" class="cta-button">Adotar 1 muda</a>
+          </div>
+          
+          <div class="level-card">
+            <div class="level-title">Adote 2 mudas</div>
+            <div class="level-price">R$ 50/mês</div>
+            <p class="level-description">Amplie seu impacto com duas árvores que crescerão juntas, fortalecendo o bioma local.</p>
+            <a href="#" class="cta-button">Adotar 2 mudas</a>
+          </div>
+          
+          <div class="level-card">
+            <div class="level-title">Adote 1 frutífera</div>
+            <div class="level-price">R$ 100/mês</div>
+            <p class="level-description">Sustente uma árvore que alimenta corpos e cria laços — como o araçá, que nutre comunidades e atrai pássaros.</p>
+            <a href="#" class="cta-button">Adotar frutífera</a>
+          </div>
+        </div>
       </div>
-
-      <a href="/" class="back-link">
-        <i class="fas fa-arrow-left"></i> Voltar ao cartão de visitas
-      </a>
-    </main>
-
-    <footer>
-      <p>Projeto capixaba em prototipagem | Foco: Manguezais e nascentes do Espírito Santo</p>
-      <p>Feito por <a href="/" style="color: var(--eco); text-decoration: none;">Luiz Medeiros</a></p>
-    </footer>
+      
+      <!-- Prova -->
+      <div class="eco-card proof-section">
+        <h2>📸 Veja o que seu gesto cria</h2>
+        <p>
+          Na EcoEsfera, seu apoio não desaparece em relatórios genéricos. Ele se concretiza em:
+        </p>
+        <ul class="proof-list">
+          <li><strong>Fotos reais</strong>, com data e localização exata do plantio</li
