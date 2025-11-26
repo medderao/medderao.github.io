@@ -77,8 +77,16 @@
       margin-bottom: 16px;
       color: var(--eco);
     }
-    .eco-card p {
+    .eco-card p, .eco-card li {
       margin-bottom: 12px;
+    }
+    ul {
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+    li {
+      margin-bottom: 8px;
     }
     
     /* Seção de apoio */
@@ -87,7 +95,7 @@
     }
     .support-levels {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       gap: 20px;
       margin-top: 20px;
     }
@@ -95,7 +103,7 @@
       background: white;
       border-radius: var(--border-radius);
       padding: 20px;
-      text-align: center;
+      text-align: left;
       border: 2px solid var(--eco);
       transition: all 0.25s ease;
     }
@@ -103,26 +111,40 @@
       transform: translateY(-3px);
       box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
     }
+    .level-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .level-icon {
+      font-size: 1.8rem;
+      color: var(--eco);
+    }
     .level-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      margin-bottom: 8px;
+      font-size: 1.4rem;
       color: var(--eco);
+      margin: 0;
     }
     .level-price {
       font-size: 1.6rem;
       font-weight: 600;
-      margin-bottom: 12px;
       color: var(--eco);
+      margin: 8px 0;
     }
-    .level-description {
+    .level-description, .level-benefits {
       margin-bottom: 15px;
       font-size: 0.95rem;
+    }
+    .level-benefits ul {
+      margin-top: 8px;
+      margin-left: 20px;
     }
     .cta-button {
       display: inline-block;
       margin: 15px 0;
-      padding: 10px 20px;
+      padding: 12px 24px;
       background-color: var(--eco);
       color: white;
       text-decoration: none;
@@ -137,29 +159,22 @@
       transform: translateY(-2px);
     }
     
-    /* Prova de impacto */
-    .proof-section {
-      margin: 30px 0;
-    }
-    .proof-list {
-      margin-left: 20px;
-      margin-top: 15px;
-    }
-    .proof-list li {
-      margin-bottom: 10px;
+    /* Prova social */
+    .proof-counter {
+      text-align: center;
+      font-weight: 600;
+      margin: 15px 0;
+      color: var(--eco);
     }
     
-    /* Link de volta */
-    .back-link {
-      display: inline-block;
-      margin-top: 20px;
-      color: var(--eco);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
+    /* FAQ */
+    .faq-item {
+      margin-bottom: 16px;
     }
-    .back-link i {
-      margin-right: 6px;
+    .faq-question {
+      font-weight: 600;
+      color: var(--eco);
+      margin-bottom: 6px;
     }
     
     /* Rodapé */
@@ -173,11 +188,6 @@
     }
     
     /* Responsivo */
-    @media (max-width: 768px) {
-      .support-levels {
-        grid-template-columns: 1fr;
-      }
-    }
     @media (max-width: 600px) {
       h1 { font-size: 2.0rem; }
       .frase-impacto { font-size: 1.2rem; }
@@ -194,12 +204,12 @@
       </div>
       <h1>EcoEsfera</h1>
       <p class="frase-impacto">
-        Na EcoEsfera, o conhecimento ancestral encontra a tecnologia para criar regeneração com prova.
+        Na EcoEsfera, sua vontade de ajudar vira floresta, sua compra vira renda local, e sua esperança vira prova concreta.
       </p>
     </header>
     
     <main>
-      <!-- Morgana -->
+ <!-- Morgana -->
       <div class="eco-card">
         <h2>🌟 Morgana: Guardiã do Conhecimento Ancestral</h2>
         <p>
@@ -212,61 +222,162 @@
           Quando Morgana planta uma árvore, não está apenas restaurando ecossistemas. Ela está tecendo memórias, criando pontos de encontro entre passado e futuro, e mostrando que a verdadeira regeneração começa quando reconectamos nossas raízes com o cuidado.
         </p>
         <!-- Espaço reservado para foto de Morgana (futuro) -->
-        <!-- <img src="morgana-plantando.jpg" alt="Morgana trabalhando com as mudas" style="width:100%; border-radius:8px; margin-top:20px;"> -->
-      </div>
-      
-      <!-- Projeto -->
+        <!-- <img src="morgana-plantando.jpg" alt="Morgana trabalhando com as mudas" style="width:100%; border-radius:8px; margin-top:20px;"> →
+
+      <!-- O Projeto -->
       <div class="eco-card">
-        <h2>🌱 Raízes do Santa Maria — Regeneração com Prova</h2>
+        <h2>🌱 O Projeto: Raízes do Santa Maria</h2>
         <p>
-          Em parceria com Morgana, a EcoEsfera inicia o <strong>Projeto "Raízes do Santa Maria"</strong>: a regeneração de áreas degradadas nas margens do Rio Santa Maria, em Espírito Santo, com o plantio de <strong>100 mudas nativas da Mata Atlântica</strong> — incluindo pau-brasil, jequitibá-rosa, cedro e araçá.
+          Em parceria com Morgana, a EcoEsfera lança o projeto de regeneração das margens do Rio Santa Maria, no Espírito Santo. O objetivo é plantar <strong>100 mudas nativas da Mata Atlântica</strong> — incluindo pau-brasil, jequitibá-rosa, cedro e araçá.
         </p>
         <p>
-          Cada árvore será acompanhada ao longo do tempo. Você não apenas apoiará o plantio — <strong>verá sua árvore crescer</strong>. Com um link exclusivo, você recebe:
+          <strong>Você acompanha o crescimento da sua árvore!</strong> Com seu link exclusivo, você recebe:
         </p>
-        <ul class="proof-list">
+        <ul>
           <li><strong>Fotos geolocalizadas</strong> do local de plantio</li>
-          <li><strong>Acesso contínuo</strong> para acompanhar sua evolução</li>
-          <li><strong>Um vídeo pessoal</strong> de Morgana agradecendo seu apoio</li>
+          <li><strong>Acesso contínuo</strong> para ver a evolução da sua muda</li>
+          <li><strong>Vídeo pessoal</strong> de agradecimento de Morgana</li>
         </ul>
-        <!-- Espaço reservado para foto do local degradado / plantio (futuro) -->
-        <!-- <img src="rio-santa-maria.jpg" alt="Área degradada às margens do Rio Santa Maria" style="width:100%; border-radius:8px; margin-top:20px;"> -->
+        
+        <!-- Prova social estática -->
+        <div class="proof-counter">
+          ✅ 12 apoiadores já confirmaram seu impacto | Meta: 100 mudas
+        </div>
       </div>
       
-      <!-- Apoie com os 3 níveis -->
+      <!-- Escolha sua raiz -->
       <div class="eco-card support-section">
-        <h2>🌿 Apoie com Propósito</h2>
-        <p>Escolha como você quer se conectar com esta regeneração:</p>
+        <h2>🌿 Conecte-se com a Transformação</h2>
+        <p>Escolha como você quer apoiar a regeneração do Rio Santa Maria:</p>
         
         <div class="support-levels">
+          <!-- Raiz Individual -->
           <div class="level-card">
-            <div class="level-title">Adote 1 muda</div>
-            <div class="level-price">R$ 30/mês</div>
-            <p class="level-description">Apoie o plantio de uma árvore nativa e receba seu link de acompanhamento vitalício.</p>
-            <a href="#" class="cta-button">Adotar 1 muda</a>
+            <div class="level-header">
+              <div class="level-icon">🌱</div>
+              <h3 class="level-title">Raiz Individual</h3>
+            </div>
+            <div class="level-price">R$ 100</div>
+            <p class="level-description">Adote uma muda com seu nome.</p>
+            <div class="level-benefits">
+              <p><strong>O que você garante:</strong></p>
+              <ul>
+                <li>Nome personalizado na muda</li>
+                <li>Certificado exclusivo</li>
+                <li>Acesso vitalício ao acompanhamento</li>
+                <li>Opção de NFT na Polygon (via QR Code)</li>
+              </ul>
+            </div>
+            <a href="#" class="cta-button">Adotar minha Raiz</a>
           </div>
           
+          <!-- Raiz Coletiva -->
           <div class="level-card">
-            <div class="level-title">Adote 2 mudas</div>
-            <div class="level-price">R$ 50/mês</div>
-            <p class="level-description">Amplie seu impacto com duas árvores que crescerão juntas, fortalecendo o bioma local.</p>
-            <a href="#" class="cta-button">Adotar 2 mudas</a>
+            <div class="level-header">
+              <div class="level-icon">🌳</div>
+              <h3 class="level-title">Raiz Coletiva</h3>
+            </div>
+            <div class="level-price">R$ 250</div>
+            <p class="level-description">Fortaleça duas mudas que crescem juntas.</p>
+            <div class="level-benefits">
+              <p><strong>O que você garante:</strong></p>
+              <ul>
+                <li>Duas mudas interconectadas</li>
+                <li>Nomes para seu impacto</li>
+                <li>Certificado coletivo</li>
+                <li><strong>NFT Exclusivo</strong> na Polygon</li>
+              </ul>
+            </div>
+            <a href="#" class="cta-button">Garantir duas Raízes</a>
           </div>
           
+          <!-- Raiz Abundante -->
           <div class="level-card">
-            <div class="level-title">Adote 1 frutífera</div>
-            <div class="level-price">R$ 100/mês</div>
-            <p class="level-description">Sustente uma árvore que alimenta corpos e cria laços — como o araçá, que nutre comunidades e atrai pássaros.</p>
-            <a href="#" class="cta-button">Adotar frutífera</a>
+            <div class="level-header">
+              <div class="level-icon">🍎</div>
+              <h3 class="level-title">Raiz Abundante</h3>
+            </div>
+            <div class="level-price">R$ 500</div>
+            <p class="level-description">Sustente uma muda frutífera que alimenta comunidades.</p>
+            <div class="level-benefits">
+              <p><strong>O que você garante:</strong></p>
+              <ul>
+                <li>Uma frutífera (ex: araçá)</li>
+                <li>Dá nome ao seu impacto</li> 
+                <li>Certificado especial com história da espécie</li>
+                <li><strong>NFT Exclusivo</strong> na Polygon</li>
+                <li>Reconhecimento como guardião da biodiversidade</li>
+              </ul>
+            </div>
+            <a href="#" class="cta-button">Nutrir com abundância</a>
           </div>
         </div>
       </div>
       
-      <!-- Prova -->
-      <div class="eco-card proof-section">
-        <h2>📸 Veja o que seu gesto cria</h2>
+      <!-- Prova de impacto -->
+      <div class="eco-card">
+        <h2>📸 Sua Prova de Impacto Irrefutável</h2>
         <p>
-          Na EcoEsfera, seu apoio não desaparece em relatórios genéricos. Ele se concretiza em:
+          Na EcoEsfera, seu apoio é concreto e rastreável:
         </p>
-        <ul class="proof-list">
-          <li><strong>Fotos reais</strong>, com data e localização exata do plantio</li
+        <ul>
+          <li><strong>Dashboard Pessoal Vitalício:</strong> Fotos reais com data e localização exata</li>
+          <li><strong>Certificado Híbrido:</strong> Certificado exclusivo + NFT opcional na Polygon (simples de resgatar com QR Code)</li>
+        </ul>
+        <p>
+          <em>Seu apoio transforma 100% em regeneração: 60% para Morgana, 25% para insumos, 15% para tecnologia e transparência.</em>
+        </p>
+      </div>
+      
+      <!-- Ciclo Virtuoso -->
+      <div class="eco-card">
+        <h2>🔄 O Ciclo Virtuoso da Regeneração</h2>
+        <ol>
+          <li><strong>Você adota:</strong> 100% do valor financia o projeto.</li>
+          <li><strong>Morgana planta:</strong> 60% sustenta sua liderança comunitária.</li>
+          <li><strong>Você recebe a prova:</strong> Fotos, certificado e NFT (opcional).</li>
+          <li><strong>A floresta renasce:</strong> 100 mudas nativas regenerando o Rio Santa Maria.</li>
+        </ol>
+      </div>
+      
+      <!-- FAQ -->
+      <div class="eco-card">
+        <h2>❓ Perguntas Frequentes</h2>
+        <div class="faq-item">
+          <div class="faq-question">Preciso entender de blockchain para participar?</div>
+          <p>Não. O certificado em PDF é imediato. O NFT é opcional e simples de resgatar com QR Code.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Como sei que minha muda foi plantada?</div>
+          <p>Você recebe fotos geolocalizadas, vídeo de agradecimento e acesso vitalício ao dashboard.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Posso nomear minha muda?</div>
+          <p>Sim! Após o pagamento, você receberá um e-mail com um link para nomear sua muda e personalizar seu certificado.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Posso presentear?</div>
+          <p>Sim! Basta escolher “Presentear” no checkout e inserir os dados da pessoa.</p>
+        </div>
+      </div>
+      
+      <!-- Chamada final -->
+      <div class="eco-card" style="text-align: center;">
+        <h2>🌿 Junte-se aos Primeiros 100 Guardiões</h2>
+        <p>
+          Sua participação regenera a Mata Atlântica e prova que um novo contrato com a natureza é possível.
+        </p>
+        <div class="proof-counter">
+          ✅ 12 guardiões já confirmaram sua raiz | Restam 88 vagas
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>Projeto capixaba em parceria com guardiãs do saber ancestral</p>
+      <p>EcoEsfera: Regeneração com Prova</p>
+      <p> Luiz Medeiros, 2025</p>
+    </footer>
+  </div>
+</body>
+</html>
