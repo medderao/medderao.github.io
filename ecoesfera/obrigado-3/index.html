@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Obrigado pela sua Raiz Abundante!</title>
+  <title>Adote sua Raiz Abundante – EcoEsfera</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="/favicon.png" type="image/png">
@@ -38,12 +38,45 @@
       color: var(--eco);
       margin-bottom: 16px;
     }
-    .form-container {
+    .section {
       background: white;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      overflow: hidden;
+      margin-bottom: 25px;
+    }
+    .form-container {
+      margin: 15px 0;
+    }
+    .payment-section {
+      text-align: center;
+      padding: 25px 20px;
+    }
+    .payment-title {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: var(--eco);
+    }
+    .mp-button-container {
+      display: inline-block;
+    }
+    .mp-button {
+      background-color: var(--eco);
+      color: white;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+      transition: all 0.25s ease;
+    }
+    .mp-button:hover {
+      background-color: #1b5e20;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(46, 125, 50, 0.3);
     }
     footer {
       text-align: center;
@@ -53,25 +86,37 @@
       padding-top: 20px;
       border-top: 1px solid rgba(0,0,0,0.05);
     }
-    @media (max-width: 600px) {
-      h1 { font-size: 1.9rem; }
-      .form-container iframe { height: 1100px !important; }
-    }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>🍎 Obrigado por nutrir com uma Raiz Abundante!</h1>
-      <p>Sua escolha vai além do plantio: você está alimentando corpos, atraindo pássaros e fortalecendo comunidades com uma árvore frutífera.</p>
+      <h1>🍎 Adote sua Raiz Abundante</h1>
+      <p>Sua escolha nutrirá comunidades com uma árvore frutífera. Complete os dados para finalizar.</p>
     </header>
     
     <main>
-      <div class="form-container">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScMjzLKphCkeksPv1GWCkHn53ZBdpsNLq9XF7BYWHyly4S75g/viewform?embedded=true" 
-                width="100%" height="1291" frameborder="0" marginheight="0" marginwidth="0">
-          Carregando…
-        </iframe>
+      <!-- Passo 1: Formulário -->
+      <div class="section">
+        <h2>1. Personalize sua frutífera</h2>
+        <p>Informe seus dados e o nome que deseja dar à sua árvore:</p>
+        <div class="form-container">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScMjzLKphCkeksPv1GWCkHn53ZBdpsNLq9XF7BYWHyly4S75g/viewform?embedded=true" 
+                  width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+            Carregando…
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Passo 2: Pagamento -->
+      <div class="payment-section">
+        <div class="payment-title">✅ Dados confirmados! Finalize seu apoio com um único clique.</div>
+        <div class="mp-button-container">
+          <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
+                  data-preference-id="3019692997-c6a20c1f-3073-4002-b5fe-9621292470ce"
+                  data-source="button">
+          </script>
+        </div>
       </div>
     </main>
     
