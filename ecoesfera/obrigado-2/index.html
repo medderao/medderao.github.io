@@ -21,7 +21,8 @@
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      padding: 2 as: 20px;
+      padding: 20px;
+      min-height: 100vh;
     }
     .container {
       max-width: 700px;
@@ -44,8 +45,41 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       margin-bottom: 25px;
     }
-    .form-container {
-      margin: 15px 0;
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+    }
+    .form-group input:focus {
+      outline: 2px solid var(--eco);
+      outline-offset: 2px;
+    }
+    .submit-button {
+      background-color: var(--eco);
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 1.05rem;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.25s ease;
+    }
+    .submit-button:hover {
+      background-color: #1b5e20;
+      transform: translateY(-2px);
     }
     .payment-section {
       text-align: center;
@@ -60,23 +94,6 @@
     .mp-button-container {
       display: inline-block;
     }
-    .mp-button {
-      background-color: var(--eco);
-      color: white;
-      padding: 14px 32px;
-      border: none;
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
-      transition: all 0.25s ease;
-    }
-    .mp-button:hover {
-      background-color: #1b5e20;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(46, 125, 50, 0.3);
-    }
     footer {
       text-align: center;
       margin-top: 40px;
@@ -85,38 +102,40 @@
       padding-top: 20px;
       border-top: 1px solid rgba(0,0,0,0.05);
     }
-    input:invalid {
-  border-color: #ef4444;
-}
-input:focus {
-  outline: 2px solid #2e7d32;
-  outline-offset: 2px;
-}
   </style>
 </head>
 <body>
   <div class="container">
     <header>
       <h1>🌳 Adote suas Raízes Coletivas</h1>
-      <p>Você está fortalecendo duas mudas que crescerão juntas. Complete os dados para impactar o mundo com sua dupla.</p>
+      <p>Fortaleça duas mudas que crescerão juntas. Preencha seus dados para personalizar seu impacto.</p>
     </header>
     
     <main>
-      <!-- Passo 1: Formulário -->
+      <!-- Formulário nativo -->
       <div class="section">
-        <h2>1. Personalize suas mudas</h2>
-        <p>Informe seus dados e os nomes que deseja dar às suas árvores:</p>
-        <div class="form-container">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd-7b0UXl7xtkpUY13yv_RwmUEZbERIqIhhkARgKtMP6XToUQ/viewform?embedded=true" 
-                  width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
-            Carregando…
-          </iframe>
-        </div>
+        <form action="https://formspree.io/f/xangdnek" method="POST">
+          <div class="form-group">
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail para envio do certificado</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="nome-muda">Como você quer nomear suas mudas?</label>
+            <input type="text" id="nome-muda" name="nome_muda" placeholder="Ex: Irmãs do Rio, Raízes da Clara e Theo" required>
+          </div>
+          <button type="submit" class="submit-button">
+            Enviar dados e prosseguir para o pagamento
+          </button>
+        </form>
       </div>
 
-      <!-- Passo 2: Pagamento -->
+      <!-- Pagamento -->
       <div class="payment-section">
-        <div class="payment-title">✅ Dados confirmados! Finalize seu apoio com um único clique.</div>
+        <div class="payment-title">✅ Dados enviados! Finalize com seu pagamento.</div>
         <div class="mp-button-container">
           <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
                   data-preference-id="3019692997-3a60a052-d337-4c46-afc7-3ea5770056f3"
